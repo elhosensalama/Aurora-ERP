@@ -1,0 +1,73 @@
+.home {
+    display: flex;
+
+    & .rightSide {
+        width: calc(100vw - 280px);
+
+        &>div {
+            padding: 1rem;
+        }
+
+        & .page_heading {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            & span {
+                padding: 0.5rem 7rem;
+                border-radius: 50rem;
+                border-bottom: 0.3rem solid rgba(255, 255, 255, 0.5);
+                margin-top: 23rem;
+                font-weight: bold;
+                text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    & .loading {
+        width: 100vw;
+        height: 100vh;
+
+        & .spinner {
+            animation: rotate 2s linear infinite;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            width: 100px;
+            height: 100px;
+
+            & .path {
+                stroke: rgb(147, 191, 236);
+                stroke-linecap: round;
+                animation: dash 1.5s ease-in-out infinite;
+            }
+
+        }
+    }
+
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

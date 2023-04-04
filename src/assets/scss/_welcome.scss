@@ -1,0 +1,111 @@
+.welcome-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+
+    & #app-info {
+        margin-left: 40px;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    & #app-info {
+        bottom: 0px;
+        left: 0px;
+        margin: 40px;
+        position: absolute;
+        transition: margin 250ms, opacity 250ms, transform 250ms;
+    }
+
+    & .info {
+        align-items: flex-end;
+        display: flex;
+
+        & .time {
+            color: whitesmoke;
+            font-size: 9.6rem;
+            height: 80px;
+            line-height: 80px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        & .weather {
+            display: inline-flex;
+            height: 20px;
+            margin-bottom: 6px;
+            margin-left: 20px;
+
+            & i,
+            & span {
+                align-items: center;
+                display: inline-flex;
+            }
+
+            & i {
+                color: #fdd835;
+                font-size: 1.44rem;
+            }
+
+            & span {
+                color: white;
+            }
+
+            & .weather-type {
+                height: 2rem;
+            }
+
+            & .weather-temperature-value {
+                font-size: 2.4rem;
+                height: 2rem;
+                margin-left: 0.5rem;
+            }
+
+            & .weather-temperature-unit {
+                align-items: flex-start;
+                font-size: 1.44rem;
+                margin-left: 0.3rem;
+            }
+        }
+    }
+
+    & .container {
+        height: 75vh;
+
+        & .left-side {
+            text-align: center;
+
+            & h1 {
+                font-size: 6rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+            }
+
+            & svg {
+                font-size: 8rem;
+            }
+        }
+    }
+
+    & .goToLogin {
+        bottom: 5rem;
+        right: 5rem;
+        position: absolute;
+        transition: opacity 250ms, transform 250ms;
+    }
+
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
